@@ -64,18 +64,30 @@
     <Analyzer Include="/home/qweqwe/Unity/Hub/Editor/2022.3.47f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets/Zombies/ZombieMovement.cs" />
     <Compile Include="Assets/Assets/World/SurfaceSectionManager.cs" />
     <Compile Include="Assets/Assets/Player/PlayerController.cs" />
     <Compile Include="Assets/Assets/Player/GunController.cs" />
     <Compile Include="Assets/Assets/World/Godzilla.cs" />
+    <Compile Include="Assets/Zombies/Zombie.cs" />
+    <Compile Include="Assets/Zombies/ZombieBodyDetection.cs" />
+    <Compile Include="Assets/World/Powerup.cs" />
     <Compile Include="Assets/Assets/Player/SectionTrigger.cs" />
+    <Compile Include="Assets/Player/GunController.cs" />
     <Compile Include="Assets/Assets/Zombies/Zombie.cs" />
+    <Compile Include="Assets/World/SurfaceController.cs" />
+    <Compile Include="Assets/Zombies/ZombieSpawner.cs" />
+    <Compile Include="Assets/World/ObjectPool.cs" />
     <Compile Include="Assets/Assets/Zombies/ZombieBodyDetection.cs" />
     <Compile Include="Assets/Assets/Player/BulletController.cs" />
+    <Compile Include="Assets/Player/CameraController.cs" />
     <Compile Include="Assets/Assets/Zombies/ZombieMovement.cs" />
     <Compile Include="Assets/Assets/Zombies/ZombieSpawner.cs" />
     <Compile Include="Assets/Assets/Player/CameraController.cs" />
+    <Compile Include="Assets/Player/BulletController.cs" />
     <Compile Include="Assets/Assets/World/SurfaceManager.cs" />
+    <Compile Include="Assets/Player/PlayerController.cs" />
+    <Compile Include="Assets/World/Godzilla.cs" />
     <Compile Include="Assets/Assets/World/Powerup.cs" />
   </ItemGroup>
   <ItemGroup>
