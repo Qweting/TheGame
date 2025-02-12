@@ -1,1 +1,1 @@
-/home/qweqwe/lp3/Game/TheGame
+/home/qweqwe/lp3/Game/Game
