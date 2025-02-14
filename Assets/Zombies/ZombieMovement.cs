@@ -28,7 +28,7 @@ public class ZombieMovement : MonoBehaviour
     {
         float distance = gameObject.transform.position.z - playerObject.transform.position.z; // Distance between zombie and player
         if (distance < 40) // If the player is close, increase speed
-            return walkSpeed * 2;
+            return walkSpeed * 1.5f;
         
         return walkSpeed; // Otherwise, return normal speed
     }

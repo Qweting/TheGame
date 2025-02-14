@@ -1,46 +1,63 @@
+using System.Collections;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public float fireRate = 10f;
-    public Transform firePoint; //this is the anchor from which the bullet will be fired
+    public float fireRate = 1f;
+    public Transform firePoint; // This is the anchor from which the bullet will be fired
     public float bulletSpeed = 10f;
-    
-    private float nextFireTime = 0f;
-    
-    
+
+    private Coroutine fireCoroutine;
+
+
     void Update()
     {
-        if(Time.time >= nextFireTime)
-        { 
-            Fire();
-            nextFireTime = Time.time + (1f / fireRate);
-        }
+        if(fireCoroutine == null)
+            fireCoroutine = StartCoroutine(FireCoroutine());
     }
-    
+
+    // This coroutine is called every 1/fireRate seconds
+    IEnumerator FireCoroutine()
+    { 
+        Fire();
+        yield return new WaitForSeconds(1f / fireRate);
+        fireCoroutine = null;
+    }
+
+    // This method is called when the player presses the fire button
     private void Fire()
     {
         GameObject bullet = BulletPool.SharedInstance.GetPoolObject();
-        if(bullet != null)
+        if (bullet != null)
         {
             bullet.transform.position = firePoint.position;
-            bullet.transform.rotation = firePoint.rotation;
             bullet.SetActive(true);
-            
+
             Rigidbody rb = bullet.GetComponent<Rigidbody>();
-            if(rb != null)
-            {
+            if (rb != null)
                 rb.velocity = firePoint.forward * bulletSpeed;
-            }
         }
     }
-    
+
+    //Trigger to destroy the bullet when it hits the wall
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("BulletDestroyTrigger"))
+        if (other.gameObject.CompareTag("BulletDestroyTrigger"))
+        {
             gameObject.SetActive(false);
+        }
     }
-    
-    
-    
+
+    // This method is called by the PowerUpController to change the fire rate
+    public void SetFireRate(float newFireRate)
+    {
+        fireRate = newFireRate;
+        Fire(); // Restart firing with the new rate
+    }
+
+    // This method is called by the PowerUpController to get the current fire rate
+    public float GetFireRate()
+    {
+        return fireRate;
+    }
 }

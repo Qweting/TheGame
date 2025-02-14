@@ -197,9 +197,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 2088270450296675247}
     m_Modifications:
     - target: {fileID: 6366472513894438695, guid: b271968c63f6405338206b1349bc739e, type: 3}
+      propertyPath: fireRate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6366472513894438695, guid: b271968c63f6405338206b1349bc739e, type: 3}
       propertyPath: firePoint
       value: 
-      objectReference: {fileID: 2088270450296675247}
+      objectReference: {fileID: 301370467346432906}
     - target: {fileID: 6848388437673388702, guid: b271968c63f6405338206b1349bc739e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.008000027

@@ -7,8 +7,9 @@ public class ZombieController : MonoBehaviour
     public Transform[] spawnPoints; // Array of spawn points
     public int zombieCount = 10; // Number of zombies to spawn
     public float spawnDelay = 0.5f; // Delay between spawns
-    private int zombiesAlive; // Number of zombies currently alive
+    public int zombiesAlive; // Number of zombies currently alive
     private Transform player;
+    private bool respawn = true; // Flag to control spawning
 
     void Start()
     {
@@ -17,6 +18,7 @@ public class ZombieController : MonoBehaviour
         zombiesAlive = zombieCount;
     }
 
+    //spawns zombis at random spawn points
     IEnumerator SpawnZombies()
     {
         for (int i = 0; i < zombieCount; i++)
@@ -29,33 +31,21 @@ public class ZombieController : MonoBehaviour
                 zombiesAlive += 1; // Increment the number of zombies alive
                 Debug.Log("Successfully spawned zombie at " + zombie.transform.position);
             }
-            yield return new WaitForSeconds(spawnDelay);
+            yield return new WaitForSeconds(spawnDelay); //delay the spawn between zombies so they don't spawn into each other
         }
+
+        yield return new WaitForSeconds(5f); // Delay of 10 seconds
+        respawn = false; // Allow spawning again
     }
 
-    //this doesn't work.
     void Update()
     {
-        if (zombiesAlive == 0 || zombiesAlive < zombieCount || IsZombieCloseToPlayer())
+        if (!respawn) //if we are done spawning spawn again
         {
-            // StartCoroutine(SpawnZombies());
-            
+            respawn = true; //dont allow spawning
+            StartCoroutine(SpawnZombies());
         }
     }
 
-    private bool IsZombieCloseToPlayer()
-    {
-        foreach (GameObject zombie in ZombieObjectPool.SharedInstance.poolObjects)
-        {
-            if (zombie.activeInHierarchy)
-            {
-                float distance = Vector3.Distance(zombie.transform.position, player.position);
-                if (distance < 100)
-                {
-                    return true;
-                }
-            }
-        }
-        return false;
-    }
+    
 }

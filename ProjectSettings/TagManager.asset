@@ -11,6 +11,8 @@ TagManager:
   - BulletDestroyTrigger
   - Zombie
   - Trigger2
+  - ReleaseZombies
+  - PrepareZombies
   layers:
   - Default
   - TransparentFX

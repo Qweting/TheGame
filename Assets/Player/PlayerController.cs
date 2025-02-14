@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public float speed = 10f;
     public float minX = -10f, maxX = 10f; //max/min bound 
     private Animator animator;
+    private float playerHealth = 100f; 
 
     void Start()
     {
@@ -62,6 +63,17 @@ public class PlayerController : MonoBehaviour
             transform.position.y,
             transform.position.z
         );
+    }
+    
+    public void TakeDamage(float damage)
+    {
+        playerHealth -= damage;
+        //implement: if player loses hp then gameover.
+    }
+    
+    public float GetHealth()
+    {
+        return playerHealth;
     }
 
 }

@@ -25,4 +25,10 @@ public class GunController : MonoBehaviour
         }
     }
     
+    
+    public void SetFireRate(float newFireRate)
+    {
+        fireRate = newFireRate; 
+    }
+    
 }
