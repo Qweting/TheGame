@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class PowerUpManager : MonoBehaviour
 {
@@ -23,21 +24,28 @@ public class PowerUpManager : MonoBehaviour
         if ( random < spawnChance)
         {
             //16:20
-            SpawnPowerup();
+            SpawnLeftWall();
+            SpawnRightWall();
         }
     }
     
-
-    void SpawnPowerup()
+    //spawns the left panel
+    void SpawnLeftWall()
+    {
+        Instantiate(rightWall, spawnPoints[1].position, Quaternion.identity);
+        leftWall.SetActive(true);
+    }
+    
+    //spawns the right panel
+    void SpawnRightWall()
     {
         //since power up perks are rare (maybe) we can afford to instantiate them at runtime instead of using object pooling (ITHINK)
         //spawn the walls
-        Instantiate(rightWall, spawnPoints[0].position, Quaternion.identity);
         Instantiate(leftWall, spawnPoints[0].position, Quaternion.identity);
         
         //activate the walls so that the update gets called and they can move.
-        leftWall.SetActive(true);
         rightWall.SetActive(true);
-
+        
     }
+    
 }

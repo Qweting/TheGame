@@ -365,6 +365,7 @@
 "Assets/World/SurfaceController.cs"
 "Assets/Zombies/Zombie.cs"
 "Assets/Zombies/ZombieBodyDetection.cs"
+"Assets/Zombies/ZombieBoss.cs"
 "Assets/Zombies/ZombieController.cs"
 "Assets/Zombies/ZombieMovement.cs"
 "Assets/Zombies/ZombieObjectPool.cs"

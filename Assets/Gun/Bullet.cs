@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
@@ -6,6 +7,7 @@ public class Bullet : MonoBehaviour
     public float fireRate = 1f;
     public Transform firePoint; // This is the anchor from which the bullet will be fired
     public float bulletSpeed = 10f;
+    private int zombiesKilled = 0; 
 
     private Coroutine fireCoroutine;
 
@@ -60,4 +62,21 @@ public class Bullet : MonoBehaviour
     {
         return fireRate;
     }
+
+
+    public int ZombiesKilled()
+    {
+        return zombiesKilled;
+    }
+
+    public void SetZombiesKilled()
+    {
+        zombiesKilled += 1; 
+    }
+
+    public void ResetZombieKills()
+    {
+        zombiesKilled = 0; 
+    }
+    
 }

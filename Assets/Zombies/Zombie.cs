@@ -32,13 +32,26 @@ public class Zombie : MonoBehaviour
             //print collision 
             if (health < 25)
             {
+                Bullet bulletZombieKills = other.GetComponent<Bullet>(); //increment the number of zombies killed
+                //spawn a panel after 100 zombies killed.
+                bulletZombieKills.SetZombiesKilled();
                 gameObject.SetActive(false);
-                _powerUpManager.GamblePerk();
+                if(bulletZombieKills.ZombiesKilled() >= 100)
+                {
+                    _powerUpManager.GamblePerk();
+                    bulletZombieKills.ResetZombieKills();
+                }
             }
             else
                 health -= bullet;
             
         }
-
     }
+    
+    public void SetZombieHealth(float health)
+    {
+        this.health = health;
+    }
+    
+    
 }

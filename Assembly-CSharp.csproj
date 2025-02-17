@@ -59,6 +59,7 @@
     <Compile Include="Assets/Zombies/ZombieController.cs" />
     <Compile Include="Assets/Player/CameraController.cs" />
     <Compile Include="Assets/World/Score.cs" />
+    <Compile Include="Assets/Zombies/ZombieBoss.cs" />
     <Compile Include="Assets/Player/BulletController.cs" />
     <Compile Include="Assets/Player/PlayerController.cs" />
     <Compile Include="Assets/World/Godzilla.cs" />

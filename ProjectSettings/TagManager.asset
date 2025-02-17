@@ -13,6 +13,7 @@ TagManager:
   - Trigger2
   - ReleaseZombies
   - PrepareZombies
+  - ZombieBoss
   layers:
   - Default
   - TransparentFX
