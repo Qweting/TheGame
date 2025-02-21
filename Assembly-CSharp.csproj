@@ -48,6 +48,7 @@
     <Compile Include="Assets/Zombies/ZombieMovement.cs" />
     <Compile Include="Assets/Gun/BulletPool.cs" />
     <Compile Include="Assets/Zombies/Zombie.cs" />
+    <Compile Include="Assets/World/UI/Score.cs" />
     <Compile Include="Assets/Zombies/ZombieBodyDetection.cs" />
     <Compile Include="Assets/World/Powerup.cs" />
     <Compile Include="Assets/Player/GunController.cs" />
@@ -59,7 +60,6 @@
     <Compile Include="Assets/World/PlayerPerks/PowerUpManager.cs" />
     <Compile Include="Assets/Zombies/ZombieController.cs" />
     <Compile Include="Assets/Player/CameraController.cs" />
-    <Compile Include="Assets/World/Score.cs" />
     <Compile Include="Assets/Zombies/ZombieBoss.cs" />
     <Compile Include="Assets/Player/BulletController.cs" />
     <Compile Include="Assets/Player/PlayerController.cs" />

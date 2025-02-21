@@ -115,7 +115,7 @@ public class PowerUpController : MonoBehaviour
 
     public void GenerateRandomPanelHealth()
     {
-        float random = Random.Range(40f, 100f);
+        float random = Random.Range(40f, 100f); //impossible to kill
         health = random;
         
         Debug.Log("Panel health bar is at:" + random);

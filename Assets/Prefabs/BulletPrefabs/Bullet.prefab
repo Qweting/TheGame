@@ -149,9 +149,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0487e1b364b4be9a819fa7293ba196e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireRate: 1
+  fireRate: 2
   firePoint: {fileID: 0}
-  bulletSpeed: 10
+  bulletSpeed: 40
 --- !u!198 &-7786248290375314492
 ParticleSystem:
   m_ObjectHideFlags: 0

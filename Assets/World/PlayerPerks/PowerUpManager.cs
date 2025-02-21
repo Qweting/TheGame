@@ -13,7 +13,7 @@ public class PowerUpManager : MonoBehaviour
     public GameObject rightWall; 
     public GameObject leftWall;
 
-    private float spawnChance = 10f; // 10% chance to spawn a power-up
+    private float spawnChance = 99f; // 10% chance to spawn a power-up
 
     public void GamblePerk()
     {
@@ -26,7 +26,7 @@ public class PowerUpManager : MonoBehaviour
             //16:20
             SpawnLeftWall();
             SpawnRightWall();
-        }
+        }                                                
     }
     
     //spawns the left panel
