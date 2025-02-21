@@ -120,10 +120,12 @@ m_ResolvedPackages:
     - 2.5.1
     - 2.5.2
     - 2.6.0
+    - 2.7.1
     compatible:
     - 2.5.1
     - 2.5.2
     - 2.6.0
+    - 2.7.1
     recommended: 2.5.2
     deprecated: []
   dependencies: []

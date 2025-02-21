@@ -49,6 +49,7 @@
     <Compile Include="Assets/Gun/BulletPool.cs" />
     <Compile Include="Assets/Zombies/Zombie.cs" />
     <Compile Include="Assets/Zombies/ZombieBodyDetection.cs" />
+    <Compile Include="Assets/World/Powerup.cs" />
     <Compile Include="Assets/Player/GunController.cs" />
     <Compile Include="Assets/Zombies/ZombieObjectPool.cs" />
     <Compile Include="Assets/Gun/Bullet.cs" />

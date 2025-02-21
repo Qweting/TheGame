@@ -43,16 +43,22 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.A)) // Move left
         {
             move = new Vector3(-speed * Time.deltaTime, 0, 0);
-            // animator.SetTrigger("MoveLeft");
+            animator.SetBool("Left", true);
+            animator.SetBool("Walk", false);
+            animator.SetBool("Right", false);
         }
         else if (Input.GetKey(KeyCode.D)) // Move right
         {
             move = new Vector3(speed * Time.deltaTime, 0, 0);
-            // animator.SetTrigger("MoveRight");
+            animator.SetBool("Left", false);
+            animator.SetBool("Walk", false);
+            animator.SetBool("Right", true);
         }
         else
         {
-            // animator.SetTrigger("Idle"); // Reset to Idle if no key is pressed
+            animator.SetBool("Left", false);
+            animator.SetBool("Walk", true);
+            animator.SetBool("Right", false);
         }
 
         transform.position += move;

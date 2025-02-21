@@ -9,7 +9,7 @@ Done:
 Needs to be implemented: 
     [.] implement the score system at the plane canvas end of the surface. Have it so the score, player health and the current round
     [.] Fix weapons and UI
-    [.]
+    [.] Add curve to the world?
     [.]
     [.]
     [.]

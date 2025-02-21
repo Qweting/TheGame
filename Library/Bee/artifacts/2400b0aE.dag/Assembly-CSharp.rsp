@@ -361,6 +361,7 @@
 "Assets/World/ObjectPool.cs"
 "Assets/World/PlayerPerks/PowerUpController.cs"
 "Assets/World/PlayerPerks/PowerUpManager.cs"
+"Assets/World/Powerup.cs"
 "Assets/World/Score.cs"
 "Assets/World/SurfaceController.cs"
 "Assets/Zombies/Zombie.cs"

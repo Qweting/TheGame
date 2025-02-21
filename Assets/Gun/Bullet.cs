@@ -11,6 +11,7 @@ public class Bullet : MonoBehaviour
 
     private Coroutine fireCoroutine;
 
+    
 
     void Update()
     {
@@ -32,6 +33,7 @@ public class Bullet : MonoBehaviour
         GameObject bullet = BulletPool.SharedInstance.GetPoolObject();
         if (bullet != null)
         {
+            
             bullet.transform.position = firePoint.position;
             bullet.SetActive(true);
 

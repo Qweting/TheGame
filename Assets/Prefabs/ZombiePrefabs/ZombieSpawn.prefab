@@ -35,6 +35,7 @@ Transform:
   - {fileID: 1018877128486953395}
   - {fileID: 4944058807542379925}
   - {fileID: 100522394247280819}
+  - {fileID: 7486265161544543128}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1630640913646694860
@@ -56,6 +57,7 @@ MonoBehaviour:
   - {fileID: 100522394247280819}
   zombieCount: 10
   spawnDelay: 0.5
+  zombiesAlive: 0
 --- !u!114 &5557168532544786409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70,7 +72,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   poolObjects: []
   objectPool: {fileID: 1042377674254466838, guid: 482a294cddbbb8a3eb96b0f77db53619, type: 3}
-  amountToPool: 10
+  amountToPool: 4
 --- !u!1 &3488078726773355774
 GameObject:
   m_ObjectHideFlags: 0
@@ -191,6 +193,37 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -3.85, y: 0, z: -5.6875916}
   m_LocalScale: {x: 5.987214, y: 1, z: 3.8668518}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6988688725198778836}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5766002880448378910
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7486265161544543128}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7486265161544543128
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5766002880448378910}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.83, y: 2, z: -0.000030517578}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6988688725198778836}
