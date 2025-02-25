@@ -69,7 +69,6 @@ public class PlayerController : MonoBehaviour
             transform.position.y,
             transform.position.z
         );
-        transform.rotation = Quaternion.Euler(0, 30f, 0);
     }
     
     public void TakeDamage(float damage)

@@ -7,7 +7,9 @@ public class Bullet : MonoBehaviour
     public float fireRate = 1f;
     public Transform firePoint; // This is the anchor from which the bullet will be fired
     public float bulletSpeed = 10f;
-    private int zombiesKilled = 0; 
+    private int zombiesKilled = 0;
+    private float damage = 10f; 
+    
 
     private Coroutine fireCoroutine;
 
@@ -79,6 +81,16 @@ public class Bullet : MonoBehaviour
     public void ResetZombieKills()
     {
         zombiesKilled = 0; 
+    }
+    
+    public void SetDamage(float newDamage)
+    {
+        damage = newDamage;
+    }
+    
+    public float GetDamage()
+    {
+        return damage;
     }
     
 }

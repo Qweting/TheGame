@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class Zombie : MonoBehaviour
 {
-    private float health = 49f;
+    private float health = 29f;
     // public BulletController bullet; //change this later on, create a clas sfor bullet //how do we use this approach? 
-    public float bullet = 25;
     private ZombieController zombieController;
     private PowerUpManager _powerUpManager;
     
@@ -29,28 +28,36 @@ public class Zombie : MonoBehaviour
     {
         if (other.CompareTag("Bullet"))
         {
+            Bullet bullet = other.GetComponent<Bullet>(); //increment the number of zombies killed
             //print collision 
             if (health < 25)
             {
-                Bullet bulletZombieKills = other.GetComponent<Bullet>(); //increment the number of zombies killed
+                ZombieScoreManager.instance.AddScore(2);
+                RoundScoreManager.instance.AddZombieKilled();
                 //spawn a panel after 100 zombies killed.
-                bulletZombieKills.SetZombiesKilled();
+                bullet.SetZombiesKilled();
                 gameObject.SetActive(false);
-                if(bulletZombieKills.ZombiesKilled() >= 100)
+                if(bullet.ZombiesKilled() >= 30  ) //after 30 zombies kills spawn perks
                 {
                     _powerUpManager.GamblePerk();
-                    bulletZombieKills.ResetZombieKills();
+                    bullet.ResetZombieKills();
                 }
             }
             else
-                health -= bullet;
+                health -= bullet.GetDamage();
             
+            other.gameObject.SetActive(false);
         }
     }
     
     public void SetZombieHealth(float health)
     {
         this.health = health;
+    }
+    
+    public float getZombieHealth()
+    {
+        return health;
     }
     
     
